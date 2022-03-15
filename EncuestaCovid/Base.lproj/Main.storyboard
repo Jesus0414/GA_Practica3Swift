@@ -10,6 +10,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Indivisa Text Sans-Black.otf">
+            <string>IndivisaTextSans-Black</string>
+        </array>
         <array key="Indivisa Text Sans-Bold.otf">
             <string>IndivisaTextSans-Bold</string>
         </array>
@@ -58,30 +61,19 @@
                                             <segment title="Empleado"/>
                                         </segments>
                                         <color key="tintColor" red="0.099374972283840179" green="0.20227015018463135" blue="0.89337557554244995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="doChangeTipoUsuario:" destination="BYZ-38-t0r" eventType="valueChanged" id="KGG-b7-PdZ"/>
+                                        </connections>
                                     </segmentedControl>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Matrícula" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JXb-of-eSy">
-                                        <rect key="frame" x="22" y="172" width="82" height="23"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="IndivisaTextSans-Bold" family="Indivisa Text Sans" pointSize="19"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingresa Número Identificación" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JHe-dj-hB5">
-                                        <rect key="frame" x="20" y="203" width="374" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" name="IndivisaTextSans-Regular" family="Indivisa Text Sans" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D8n-h2-hb5">
-                                        <rect key="frame" x="22" y="103" width="69" height="23"/>
+                                        <rect key="frame" x="21" y="172" width="69" height="23"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="IndivisaTextSans-Bold" family="Indivisa Text Sans" pointSize="19"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingresa Nombre Completo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YRg-vc-m2E">
-                                        <rect key="frame" x="20" y="134" width="374" height="30"/>
+                                        <rect key="frame" x="19" y="203" width="374" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="IndivisaTextSans-Regular" family="Indivisa Text Sans" pointSize="18"/>
@@ -99,7 +91,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="IndivisaTextSans-Regular" family="Indivisa Text Sans" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" textContentType="email"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Información General" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4u-6m-zea">
                                         <rect key="frame" x="21" y="0.0" width="192" height="27"/>
@@ -121,6 +113,9 @@
                                         <fontDescription key="fontDescription" name="IndivisaTextSans-Regular" family="Indivisa Text Sans" pointSize="33"/>
                                         <color key="tintColor" red="0.079537989690500591" green="0.20570923728275939" blue="0.89337557554244995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Siguiente"/>
+                                        <connections>
+                                            <action selector="doTapSiguiente:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gvZ-qH-04Q"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k7e-LE-a93">
                                         <rect key="frame" x="27" y="575" width="358" height="87"/>
@@ -130,11 +125,25 @@
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Matrícula" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JXb-of-eSy">
+                                        <rect key="frame" x="21" y="103" width="216" height="23"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="IndivisaTextSans-Bold" family="Indivisa Text Sans" pointSize="19"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ingresa Matrícula" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JHe-dj-hB5">
+                                        <rect key="frame" x="19" y="134" width="374" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="IndivisaTextSans-Regular" family="Indivisa Text Sans" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jgz-iS-VkT">
-                                <rect key="frame" x="0.0" y="82" width="414" height="732"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jgz-iS-VkT">
+                                <rect key="frame" x="0.0" y="139" width="414" height="723"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Preguntas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IL0-hR-Knw">
@@ -158,7 +167,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="z5G-kZ-Cwd">
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="z5G-kZ-Cwd">
                                         <rect key="frame" x="20" y="114" width="371" height="29"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <segments>
@@ -174,8 +183,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Estoy poditivo en COVID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCF-bn-kMH">
-                                        <rect key="frame" x="20" y="221" width="179" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Estoy positivo en COVID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCF-bn-kMH">
+                                        <rect key="frame" x="20" y="221" width="177" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="IndivisaTextSans-Regular" family="Indivisa Text Sans" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -265,7 +274,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="yvf-51-dGM">
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="yvf-51-dGM">
                                         <rect key="frame" x="20" y="518" width="371" height="29"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <segments>
@@ -280,21 +289,73 @@
                                         <fontDescription key="fontDescription" name="IndivisaTextSans-Regular" family="Indivisa Text Sans" pointSize="32"/>
                                         <color key="tintColor" red="0.12301989481747515" green="0.20067114086661575" blue="0.89337557554244995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Enviar"/>
+                                        <connections>
+                                            <action selector="doTapEnviar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JJw-cW-GIk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U1M-HE-1Ul">
+                                        <rect key="frame" x="28" y="681" width="73" height="51"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="IndivisaTextSans-Regular" family="Indivisa Text Sans" pointSize="32"/>
+                                        <color key="tintColor" red="0.1230198948" green="0.20067114089999999" blue="0.89337557550000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Atrás"/>
+                                        <connections>
+                                            <action selector="doTapAtras:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hwc-gy-i0d"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="STK-8i-PBO">
+                                <rect key="frame" x="20" y="383" width="374" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WARNING" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tEN-Dg-YEd">
+                                        <rect key="frame" x="8" y="4" width="358" height="75"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="IndivisaTextSans-Black" family="Indivisa Text Sans" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wax-Er-0M0">
+                                        <rect key="frame" x="300" y="91" width="68" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="IndivisaTextSans-Bold" family="Indivisa Text Sans" pointSize="17"/>
+                                        <color key="tintColor" red="0.13361883817415171" green="0.2181658768359859" blue="0.89337557554244995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Okey bro"/>
+                                        <connections>
+                                            <action selector="doTapOkey:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q4d-lh-Okn"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="Jgz-iS-VkT"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
+                        <outlet property="lblEmail" destination="L4f-zB-Emh" id="m2F-Hx-0mx"/>
+                        <outlet property="lblMatricula" destination="JXb-of-eSy" id="KIh-VS-RB4"/>
+                        <outlet property="lblNombre" destination="D8n-h2-hb5" id="Xx9-oU-lcZ"/>
+                        <outlet property="lblWarning" destination="tEN-Dg-YEd" id="Psa-7c-ZnV"/>
+                        <outlet property="scContactoCovid" destination="z5G-kZ-Cwd" id="D1p-Fd-vxG"/>
+                        <outlet property="scHaSidoVacunado" destination="yvf-51-dGM" id="b7X-cU-b9o"/>
+                        <outlet property="scTipoUsuario" destination="roV-in-28l" id="h64-v6-m0C"/>
+                        <outlet property="swCansancio" destination="51X-1a-Vs0" id="CoK-9c-Vkw"/>
+                        <outlet property="swDolorCabeza" destination="bPU-SB-yKo" id="QhF-C2-wlK"/>
+                        <outlet property="swFiebre" destination="34m-g3-nZF" id="WqQ-Qv-ot3"/>
+                        <outlet property="swNinguno" destination="21G-d9-Qoq" id="Okb-BE-Idm"/>
+                        <outlet property="swPerdidaSentido" destination="OFL-bz-KfT" id="PcW-9U-iyh"/>
+                        <outlet property="swPositivoCovid" destination="YSJ-91-EmY" id="5rY-6z-Qep"/>
+                        <outlet property="swTos" destination="mGR-cf-SF0" id="nGl-ad-BZe"/>
+                        <outlet property="txtEmail" destination="r7X-Jt-7kF" id="wIP-Ho-hJJ"/>
+                        <outlet property="txtMatricula" destination="JHe-dj-hB5" id="QuN-YL-Vz9"/>
+                        <outlet property="txtNombre" destination="YRg-vc-m2E" id="ORd-vo-MOO"/>
                         <outlet property="vwCover" destination="aJF-X5-j3E" id="dmV-FU-kT3"/>
+                        <outlet property="vwInfoGeneral" destination="3Uq-Em-ASV" id="fpk-w5-ViL"/>
+                        <outlet property="vwPreguntas" destination="Jgz-iS-VkT" id="Hvn-o2-VzE"/>
+                        <outlet property="vwWarning" destination="STK-8i-PBO" id="XLr-Iw-3mt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
